@@ -1,22 +1,22 @@
 <?php
- session_start();
+ //session_start();
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sklep internetowy</title>
+    <title>Shop</title>
 </head>
 <body>
-<h1>Zaloguj sie</h1>
-<form action="zaloguj.php" method="post">
+<h1>Log in</h1>
+<form action="login.php" method="post">
     Login: <br/> <input type="text" name="login"> <br/>
-    Hasło: <br/> <input type="password" name="haslo"> <br/><br/>
-    <input type="submit" value="Zaloguj się">
+    Password: <br/> <input type="password" name="password"> <br/><br/>
+    <input type="submit" value="Log in">
 </form>
-<form action="zarejestruj.php" method="post">
-    <input type="submit" value="Zarejestruj się">
+<form action="register.php" method="post">
+    <input type="submit" value="Register">
 </form>
 </body>
 </html>
