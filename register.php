@@ -26,6 +26,11 @@
             header('Location:form.php');
             exit();
         }
+        if(!strpos($email, "@")){
+            $_SESSION['error']="Uncorrect email";
+            header('Location:form.php');
+            exit();
+        }
         /*$sql="INSERT INTO klienci VALUES(NULL,'$name','$surname','$login','$passwordc','$email')";
         mysqli_query($polaczenie, $sql);*/
         header('Location:index.php');
