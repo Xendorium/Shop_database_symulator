@@ -12,8 +12,8 @@
 <body>
 <h1>Log in</h1>
 <form action="login.php" method="post">
-    Login: <br/> <input type="text" name="login"> <br/>
-    Password: <br/> <input type="password" name="password"> <br/><br/>
+    Login: <br/> <input type="text" name="login" autocomplete="off"> <br/>
+    Password: <br/> <input type="password" name="password" autocomplete="off"> <br/><br/>
     <input type="submit" value="Log in">
 </form>
 <form action="form.php" method="post">
@@ -21,3 +21,6 @@
 </form>
 </body>
 </html>
+<?php
+$error=$_SESSION['error_'];
+echo '<span style="color:red">'.$error.'</span>';

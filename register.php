@@ -6,7 +6,7 @@
         echo "Error" .$connection->connect_errno;
     }
     else{
-        mysqli_select_db($connection, $database);
+        mysqli_select_db($connection,$database);
 
         $name=$_POST['name'];
         $surname=$_POST['surname'];
