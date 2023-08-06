@@ -1,11 +1,12 @@
 <?php
+    session_start();
     require_once 'dbconnect.php';
-    $polaczenie = mysqli_connect($host,$user,$password);
-    if($polaczenie->connect_errno!=0) {
-        echo "Error" .$polaczenie->connect_errno;
+    $connection = mysqli_connect($host,$user,$password);
+    if($connection->connect_errno!=0) {
+        echo "Error" .$connection->connect_errno;
     }
     else{
-        mysqli_select_db($polaczenie, $database);
+        mysqli_select_db($connection, $database);
 
         $name=$_POST['name'];
         $surname=$_POST['surname'];
@@ -13,17 +14,15 @@
         $passwordc=$_POST['password'];
         $email=$_POST['email'];
 
-        $sql="SELECT idklienta FROM klienci WHERE login='$login'";
-        $rezults=mysqli_query($polaczenie, $sql);
-        if(isset($rezults)){
-            $_SESSION['error']="This login is already used";
+        if($name==""||$surname==""||$login==""||$passwordc=""||$email==""){
+            $_SESSION['error']="Fill all fields";
             header('Location:form.php');
             exit();
         }
-        $sql="SELECT idklienta FROM klienci WHERE email='$email'";
-        $rezults=mysqli_query($polaczenie, $sql);
-        if($rezults!=NULL){
-            $_SESSION['error']="This email is already used";
+        $sql = "SELECT*FROM klienci WHERE login='$login' OR email='$email'";
+        $results=mysqli_query($connection,$sql);
+        if($results>0){
+            $_SESSION['error']="Person with that login or email exist";
             header('Location:form.php');
             exit();
         }
