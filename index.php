@@ -1,6 +1,5 @@
 <?php
     session_start();
-
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +15,7 @@
     Password: <br/> <input type="password" name="password"> <br/><br/>
     <input type="submit" value="Log in">
 </form>
-<form action="register.php" method="post">
+<form action="form.php" method="post">
     <input type="submit" value="Register">
 </form>
 </body>
