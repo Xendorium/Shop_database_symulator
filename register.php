@@ -21,7 +21,7 @@
         }
         $sql = "SELECT*FROM klienci WHERE login='$login' OR email='$email'";
         $results=mysqli_query($connection,$sql);
-        if($results>0){
+        if(mysqli_num_rows($results)!=0){
             $_SESSION['error']="Person with that login or email exist";
             header('Location:form.php');
             exit();
