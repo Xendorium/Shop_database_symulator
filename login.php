@@ -13,10 +13,18 @@ else {
     $sql="SELECT*FROM klienci WHERE login='$login'AND haslo='$passordc'";
     $results=mysqli_query($connection,$sql);
     if(mysqli_num_rows($results)>0){
-        echo "Log in";
+        $row=mysqli_fetch_assoc($results);
+        $name=$row['imie'];
+        echo "Witaj ".$name."!";
+
+
+
+
+
+        mysqli_close($connection);
     }
     else{
-        $_SESSION['error_']='Incorrect email or login';
+        $_SESSION['error_']='Incorrect login or password';
         header('Location:index.php');
         exit();
     }
