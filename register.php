@@ -31,8 +31,8 @@
             header('Location:form.php');
             exit();
         }
-        /*$sql="INSERT INTO klienci VALUES(NULL,'$name','$surname','$login','$passwordc','$email')";
-        mysqli_query($polaczenie, $sql);*/
+        $sql="INSERT INTO klienci VALUES(NULL,'$name','$surname','$login','$passwordc','$email')";
+        mysqli_query($connection, $sql);
         header('Location:index.php');
         exit();
     }
