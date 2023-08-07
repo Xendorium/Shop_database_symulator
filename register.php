@@ -27,7 +27,7 @@
             exit();
         }
         if(!strpos($email, "@")){
-            $_SESSION['error']="Uncorrect email";
+            $_SESSION['error']="Incorrect email";
             header('Location:form.php');
             exit();
         }

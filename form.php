@@ -9,6 +9,9 @@ Password: <br/> <input type="password" name="password" autocomplete="off"> <br/>
 Email: <br/> <input type="text" name="email" autocomplete="off"> <br/>
     <input type="submit" value="Register">
 </form>
+    <form action="index.php" method="post">
+        <input type="submit" value="Back">
+    </form>
 <?php
     $error=$_SESSION['error'];
     echo '<span style="color:red">'.$error.'</span>';
