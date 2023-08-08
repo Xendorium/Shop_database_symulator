@@ -14,18 +14,17 @@ else {
     $results=mysqli_query($connection,$sql);
     if(mysqli_num_rows($results)>0){
         $row=mysqli_fetch_assoc($results);
+        $id=$row['idklienta'];
         $name=$row['imie'];
-        echo "Hello ".$name."!</br>";
-        echo "What do you want to do?</br>";
-        echo '<form action="change_data.php" method="post">';
-        echo    '<input type="submit" value="Change data">';
-        echo '</form>';
-        echo '<form action="index.php" method="post">';
-        echo    '<input type="submit" value="Make an order">';
-        echo '</form>';
-        echo '<form action="index.php" method="post">';
-        echo    '<input type="submit" value="Logout">';
-        echo '</form>';
+        $surname=$row['nazwisko'];
+        $login=$row['login'];
+        $email=$row['email'];
+        echo "<b>Your data </b></br>";
+        echo "Your id ".$id."</br>";
+        echo "Your name ".$name."</br>";
+        echo "Your surname ".$surname."</br>";
+        echo "Your login ".$login."</br>";
+        echo "Your email ".$email."</br>";
         mysqli_close($connection);
     }
     else{
