@@ -1,0 +1,17 @@
+body{
+    font-family: Arial, serif;
+    background-color: linen;
+}
+img{
+    width: 300px;
+    height: 300px;
+}
+h1{
+    font-size: 50px;
+}
+form{
+    font-size: 30px;
+}
+input{
+    font-size: 30px;
+}
