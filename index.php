@@ -20,10 +20,12 @@
         <form action="login.php" method="post">
             Login: <br/> <input type="text" name="login" autocomplete="off"> <br/>
             Password: <br/> <input type="password" name="password" autocomplete="off"> <br/><br/>
-            <input type="submit" value="Log in">
-        </form>
-        <form action="form.php" method="post">
-            <input type="submit" value="Register">
+            <div class="submit">
+                <input class="sub" type="submit" value="Log in">
+                </form>
+                <form action="form.php" method="post">
+                    <input class="sub" type="submit" value="Register">
+            </div>
         </form>
     </main>
 </body>
