@@ -11,15 +11,20 @@
     <title>Shop</title>
 </head>
 <body>
-<h1>Log in</h1>
-<form action="login.php" method="post">
-    Login: <br/> <input type="text" name="login" autocomplete="off"> <br/>
-    Password: <br/> <input type="password" name="password" autocomplete="off"> <br/><br/>
-    <input type="submit" value="Log in">
-</form>
-<form action="form.php" method="post">
-    <input type="submit" value="Register">
-</form>
+    <header>
+        <img src="prof.jpg" alt=""/>
+    </header>
+    <main>
+        <h1>Log in</h1>
+        <form action="login.php" method="post">
+            Login: <br/> <input type="text" name="login" autocomplete="off"> <br/>
+            Password: <br/> <input type="password" name="password" autocomplete="off"> <br/><br/>
+            <input type="submit" value="Log in">
+        </form>
+        <form action="form.php" method="post">
+            <input type="submit" value="Register">
+        </form>
+    </main>
 </body>
 </html>
 <?php
